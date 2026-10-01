@@ -1,0 +1,17 @@
+---
+- name: Vars, conditionala, and loops
+  hosts: lab
+  gather_facts: false
+  vars:
+    nums:
+      - 1
+      - 10
+      - 20
+      - 25
+      - 30
+  tasks:
+    - name: Display any numbers greater than 10
+      ansible.builtin.debug:
+        msg: "The number is {{ item }}"
+      loop: "{{ nums }}"
+      when: item > 10

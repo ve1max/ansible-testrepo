@@ -1,0 +1,2 @@
+[lab]
+ubuntu-vm ansible_host=192.168.42.133 ansible_user=videlka
